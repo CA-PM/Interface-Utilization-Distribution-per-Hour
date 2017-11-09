@@ -125,13 +125,13 @@
           ).sortKeys(d3.ascending)
         .rollup(function(leaves) { return {
           total: leaves.length,
-          mean: d3.mean(leaves, function(d) { return Number(d.im_Utilization); }),
-          min: d3.min(leaves, function(d) { return Number(d.im_Utilization); }),
-          max: d3.max(leaves, function(d) { return Number(d.im_Utilization); }),
-          range1: d3.sum(leaves, function (d) { if (d.im_Utilization >= 75 ) { return 1} }),
-          range2: d3.sum(leaves, function (d) { if ((d.im_Utilization < 75) &&  (d.im_Utilization >= 50)) { return 1} }),
-          range3: d3.sum(leaves, function (d) { if ((d.im_Utilization < 50) &&  (d.im_Utilization >= 25)) { return 1} }),
-          range4: d3.sum(leaves, function (d) { if (d.im_Utilization < 25) {  return 1} }),
+          mean: d3.mean(leaves, function(d) { return Number(d[metric]); }),
+          min: d3.min(leaves, function(d) { return Number(d[metric]); }),
+          max: d3.max(leaves, function(d) { return Number(d[metric]); }),
+          range1: d3.sum(leaves, function (d) { if (d[metric] >= 75 ) { return 1} }),
+          range2: d3.sum(leaves, function (d) { if ((d[metric] < 75) &&  (d[metric] >= 50)) { return 1} }),
+          range3: d3.sum(leaves, function (d) { if ((d[metric] < 50) &&  (d[metric] >= 25)) { return 1} }),
+          range4: d3.sum(leaves, function (d) { if (d[metric] < 25) {  return 1} }),
         }})
         .entries(thisData);
 
