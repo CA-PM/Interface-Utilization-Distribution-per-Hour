@@ -97,11 +97,14 @@
               "&$top=" + rows +
               "&$format=text/csv";
         }
-        
 
         console.log("URL: " + url);
 
       }
+      var busyHours=[],hourData=[],chartData=[]
+      var maxHourValue= 0;
+      // Let's make 24 buckets 
+      for (var counter = 0; counter < 24; counter++) { busyHours.push([]); busyHours[counter]=0 };
     // Load data set using D3.js 
       d3.csv(url,function(error, data) {
         if (error) {
