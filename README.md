@@ -25,7 +25,9 @@ Based on the NVD3 library.
 #### Parameters
 
 1. 'mode' : Specifies whether to use in, out, or toal
--- valid values: all [default], in, out
+-- valid values: total [default], in, out
+2. 'groupBy' : specifies the time bucket size. Users can view by hour of day, day of week, or day of month
+-- value values: hour [default], byDayOfWeek, byDayOfMonth
 
 
 ===================================================================================
