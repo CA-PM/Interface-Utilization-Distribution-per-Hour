@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Interface Utilization Distribution
 
 ![About](SCREEN-Interface-Util-Distribution.png)
@@ -26,7 +25,7 @@ Based on the NVD3 library.
 #### Parameters
 
 1. 'mode' : Specifies whether to use in, out, or toal
-  1a. valid values: all [default], in, out
+-- valid values: all [default], in, out
 
 
 ===================================================================================
